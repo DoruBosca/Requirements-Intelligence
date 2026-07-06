@@ -1,0 +1,6 @@
+{
+  "name": "Requirements Intelligence",
+  "description": "An AI-powered platform for requirement classification, quality scoring, duplicate and conflict detection, ambiguity analysis, and testable statement generation using Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
