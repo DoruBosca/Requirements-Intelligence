@@ -5,11 +5,14 @@
 
 ## Overview
 
-Requirements Intelligence is an AI-enabled platform that helps engineering teams improve the quality, consistency, and testability of requirements throughout the product development lifecycle.
+Requirements Intelligence is an AI-enabled platform that helps engineering teams improve the quality, consistency,
+and testability of requirements throughout the product development lifecycle.
 
-The solution automates the analysis of requirement documents, identifies quality issues, detects ambiguity and conflicts, and generates actionable recommendations to improve requirement quality and verification readiness.
+The solution automates the analysis of requirement documents, identifies quality issues, detects ambiguity and conflicts,
+and generates actionable recommendations to improve requirement quality and verification readiness.
 
-Designed for requirements engineers, system engineers, product owners, software engineers, and validation teams, the platform accelerates requirements reviews and supports the creation of high-quality specifications that are ready for development and testing.
+Designed for requirements engineers, system engineers, product owners, software engineers, and validation teams,
+the platform accelerates requirements reviews and supports the creation of high-quality specifications that are ready for development and testing.
 
 ---
 
