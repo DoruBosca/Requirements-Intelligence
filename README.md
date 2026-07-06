@@ -21,16 +21,14 @@ the platform accelerates requirements reviews and supports the creation of high-
 ### Requirement Import
 
 Import requirements from multiple sources:
-
-- Excel spreadsheets (.xlsx)
-- PDF requirement specifications
-- Internal requirements management tools through REST APIs
+- Excel spreadsheets
+- PDF format
+- Internal requirements management tools (REST APIs)
 - Custom enterprise repositories and engineering platforms
 
 ### Requirement Classification
 
 Automatically classify requirements into categories such as:
-
 - Functional Requirements
 - Non-Functional Requirements
 - Performance Requirements
@@ -42,7 +40,6 @@ Automatically classify requirements into categories such as:
 ### Ambiguity Detection
 
 Identify vague, subjective, or unclear wording such as:
-
 - "fast"
 - "efficient"
 - "user-friendly"
@@ -56,7 +53,6 @@ The platform highlights problematic statements and recommends measurable alterna
 Evaluate requirement quality using industry best practices and customizable rules.
 
 Quality indicators include:
-
 - Clarity
 - Completeness
 - Consistency
@@ -67,7 +63,6 @@ Quality indicators include:
 ### Duplicate Requirement Detection
 
 Detect:
-
 - Exact duplicates
 - Semantic duplicates
 - Near-duplicate requirements
@@ -80,7 +75,6 @@ Identify requirements that cannot be objectively verified due to missing accepta
 ### Requirement Decomposition
 
 Automatically decompose large requirement statements into:
-
 - Atomic requirements
 - Testable statements
 - Verification-ready specifications
@@ -130,7 +124,6 @@ Detect requirements that cannot be objectively tested or verified.
 Generate improved requirement formulations using industry best practices.
 
 Recommendations may include:
-
 - Replacing weak language
 - Adding measurable criteria
 - Clarifying actors and conditions
@@ -177,7 +170,7 @@ Enable engineers to focus on value-added activities instead of manual document r
 
 # Typical Workflow
 
-```text
+```
 Import Requirements
        ↓
 Analyze Requirements
@@ -227,7 +220,7 @@ Export Analysis Results
 
 ### Input
 
-```text
+```
 The system should quickly notify users when a critical failure occurs.
 ```
 
@@ -243,13 +236,13 @@ The system should quickly notify users when a critical failure occurs.
 
 ### Suggested Improvement
 
-```text
+```
 The system shall notify the user within 500 milliseconds after detection of a critical failure condition.
 ```
 
 ### Generated Testable Statement
 
-```text
+```
 Verify that a notification is displayed within 500 milliseconds after a critical failure is detected.
 ```
 
@@ -257,7 +250,7 @@ Verify that a notification is displayed within 500 milliseconds after a critical
 
 # Architecture
 
-```text
+```
 ┌─────────────────────┐
 │      Frontend       │
 └──────────┬──────────┘
@@ -364,5 +357,4 @@ Our vision is to create an intelligent Requirements Engineering Copilot that ena
 This project is licensed under the MIT License.
 
 ---
-**Requirements Intelligence** – Transforming requirements into actionable engineering knowledge through AI.
 ````
