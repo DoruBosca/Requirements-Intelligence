@@ -77,27 +77,47 @@ Vision
 
 **Product Roadmap**
 Phase 1
+
 `Requirement import
+
 `Classification
+
 `Ambiguity detection
+
 `Quality scoring
 
+
 Phase 2
+
 `AI requirement improvement
+
 `Acceptance criteria generation
+
 `Duplicate detection
+
 `Testability assessment
+
 
 Phase 3
 `Conflict analysis
+
 `Traceability management
+
 `Requirement-to-Test generation
+
 `Enterprise integrations
+
 
 Phase 4
 `Multi-Agent Requirements Copilot
+
 `Impact analysis
+
 `Compliance validation
+
 `ASPICE support
+
 `ISO 26262 support
+
 `Automated engineering reviews
+
