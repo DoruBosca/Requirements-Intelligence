@@ -1,12 +1,9 @@
-This is a strong product concept with clear business value. For a GitHub repository, I would recommend making the README more executive-friendly, product-oriented, and implementation-focused, similar to modern AI SaaS projects. The structure below is optimized for engineering leaders, solution architects, developers, and potential stakeholders evaluating the platform.
-
-🚀 Requirements Intelligence
+🚀 **Requirements Intelligence**
 
 AI-Powered Requirements Engineering Platform that transforms raw requirements into clear, measurable, consistent, and testable specifications.
 
-https://img.shields.io/badge/AI-Requirements%20Engineering-blue https://img.shields.io/badge/LLM-Powered-green https://img.shields.io/badge/Enterprise-Ready-orange https://img.shields.io/badge/License-MIT-lightgrey
 
-Overview
+**Overview**
 
 Requirements Intelligence is an enterprise-grade AI platform designed to improve the quality of requirements throughout the product development lifecycle.
 
@@ -14,11 +11,11 @@ Using Generative AI, NLP, semantic analysis, and requirements engineering best p
 
 The solution supports engineering organizations in reducing requirement defects, accelerating reviews, improving traceability, and increasing overall product quality.
 
-Why Requirements Intelligence?
+**Why Requirements Intelligence?**
 
 Poor requirements remain one of the leading causes of project delays, cost overruns, and product defects.
 
-Common challenges include:
+**Common challenges include:**
 
 Ambiguous requirements
 Incomplete specifications
@@ -246,48 +243,6 @@ Verification Statements
         ▼
 Export Reports
 
-Architecture
-┌───────────────────────────┐
-│         Frontend          │
-│ React / Next.js           │
-└─────────────┬─────────────┘
-              │
-              ▼
-┌───────────────────────────┐
-│        API Gateway        │
-└─────────────┬─────────────┘
-              │
-              ▼
-┌───────────────────────────┐
-│ Requirements Intelligence │
-│                           │
-│ • Classification Engine   │
-│ • Quality Assessment      │
-│ • Ambiguity Analysis      │
-│ • Duplicate Detection     │
-│ • Conflict Detection      │
-│ • Traceability Engine     │
-└─────────────┬─────────────┘
-              │
-              ▼
-┌───────────────────────────┐
-│        AI Services        │
-│                           │
-│ • Azure OpenAI            │
-│ • Prompt Orchestration    │
-│ • Agent Framework         │
-│ • Semantic Search         │
-└─────────────┬─────────────┘
-              │
-              ▼
-┌───────────────────────────┐
-│ Data & Integrations Layer │
-│                           │
-│ • SharePoint              │
-│ • Requirements Tools      │
-│ • Engineering Databases   │
-│ • APIs                    │
-└───────────────────────────┘
 
 Business Benefits
 🎯 Improved Requirement Quality
