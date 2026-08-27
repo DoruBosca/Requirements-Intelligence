@@ -6,6 +6,10 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
+html {
+  font-size: 17px;
+}
+
 /* Frosted glass utilities */
 .glass-panel {
   background: rgba(255, 255, 255, 0.05);

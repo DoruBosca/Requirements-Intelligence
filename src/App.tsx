@@ -220,57 +220,56 @@ export default function App() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#312e81,_transparent_45%),_radial-gradient(circle_at_bottom_left,_#1e1b4b,_transparent_45%)] opacity-70 pointer-events-none z-0" />
 
       {/* Top Navigation Bar */}
-      <header id="app-header" className="border-b border-white/10 bg-white/5 backdrop-blur-md sticky top-0 z-50 px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 relative z-10">
-        <div className="flex items-center gap-2.5">
-          <div className="p-2 bg-indigo-500/10 border border-indigo-500/20 rounded-xl">
-            <Layers className="w-5 h-5 text-indigo-400" />
-          </div>
-          <div>
-            <h1 className="text-sm font-bold tracking-tight text-white flex items-center gap-1.5">
-              Requirements Intelligence
-              <span className="text-[10px] font-mono bg-white/5 border border-white/10 text-indigo-200 px-1.5 py-0.2 rounded font-normal">
-                v1.2
-              </span>
-            </h1>
-            <p className="text-[10px] text-slate-400 font-medium">Enterprise Requirements Engineering & Verification Agent</p>
-          </div>
-        </div>
-
-        {/* API connection indicator status */}
-        <div className="flex items-center gap-3">
-          {serverStatus.active ? (
-            serverStatus.hasApiKey ? (
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-xs text-indigo-200 font-semibold shadow-inner">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
-                </span>
-                <span>Gemini API Connected</span>
-              </div>
-            ) : (
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-xs text-amber-200 font-semibold">
-                <span className="inline-block w-2 h-2 rounded-full bg-amber-400"></span>
-                <span>Sandbox Run (Mock fallback enabled)</span>
-              </div>
-            )
-          ) : (
-            <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-xs text-slate-400 font-semibold">
-              <span className="inline-block w-2 h-2 rounded-full bg-slate-500"></span>
-              <span>Offline</span>
+      <header id="app-header" className="border-b border-white/10 bg-white/5 backdrop-blur-md sticky top-0 z-50 px-6 py-4 relative z-10">
+        <div className="max-w-[1430px] w-full mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-2.5">
+            <div className="p-2 bg-indigo-500/10 border border-indigo-500/20 rounded-xl">
+              <Layers className="w-5 h-5 text-indigo-400" />
             </div>
-          )}
+            <div>
+              <h1 className="text-sm font-bold tracking-tight text-white flex items-center gap-1.5">
+                Requirements Intelligence
+              </h1>
+              <p className="text-[11px] text-slate-400 font-medium">Enterprise Requirements Engineering & Verification Agent</p>
+            </div>
+          </div>
 
-          <button
-            onClick={() => setShowIngestionPanel(!showIngestionPanel)}
-            className="bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 py-1.5 px-3 rounded-lg text-xs font-semibold cursor-pointer transition-colors"
-          >
-            {showIngestionPanel ? 'Hide Ingestion Controls' : 'Show Ingestion Controls'}
-          </button>
+          {/* API connection indicator status */}
+          <div className="flex items-center gap-3">
+            {serverStatus.active ? (
+              serverStatus.hasApiKey ? (
+                <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-xs text-indigo-200 font-semibold shadow-inner">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+                  </span>
+                  <span>Gemini API Connected</span>
+                </div>
+              ) : (
+                <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-xs text-amber-200 font-semibold">
+                  <span className="inline-block w-2 h-2 rounded-full bg-amber-400"></span>
+                  <span>Sandbox Run (Mock fallback enabled)</span>
+                </div>
+              )
+            ) : (
+              <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-xs text-slate-400 font-semibold">
+                <span className="inline-block w-2 h-2 rounded-full bg-slate-500"></span>
+                <span>Offline</span>
+              </div>
+            )}
+
+            <button
+              onClick={() => setShowIngestionPanel(!showIngestionPanel)}
+              className="bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 py-1.5 px-3 rounded-lg text-xs font-semibold cursor-pointer transition-colors"
+            >
+              {showIngestionPanel ? 'Hide Ingestion Controls' : 'Show Ingestion Controls'}
+            </button>
+          </div>
         </div>
       </header>
 
       {/* Main Workspace Body */}
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 space-y-6 relative z-10">
+      <main className="flex-1 max-w-[1430px] w-full mx-auto p-4 md:p-6 space-y-6 relative z-10">
         
         {systemError && (
           <div className="bg-white/5 backdrop-blur-xl border border-blue-500/30 text-blue-200 p-3.5 rounded-xl text-xs flex gap-2.5 items-center">
@@ -531,7 +530,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="border-t border-white/10 bg-black/20 mt-12 py-6 px-6 relative z-10 backdrop-blur-md">
-        <div className="max-w-7xl w-full mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+        <div className="max-w-[1430px] w-full mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
           <p>© 2026 Requirements Intelligence Sandbox. Built for rigorous software design & safety verification.</p>
           <div className="flex gap-4">
             <span className="text-indigo-300 font-mono">Status: Green 3.5-Flash Active</span>

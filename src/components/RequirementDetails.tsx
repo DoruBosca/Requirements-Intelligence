@@ -41,16 +41,16 @@ export default function RequirementDetails({ requirement, onApplyImprovement }: 
             <span className="font-mono text-xs font-semibold text-slate-200 bg-black/30 border border-white/10 px-2 py-0.5 rounded">
               {requirement.id}
             </span>
-            <span className="text-[10px] uppercase font-bold tracking-wider bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 px-2 py-0.5 rounded-full">
+            <span className="text-[11px] uppercase font-bold tracking-wider bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 px-2 py-0.5 rounded-full">
               {analysis.classification}
             </span>
             {analysis.isVerifiable ? (
-              <span className="text-[10px] uppercase font-bold tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full flex items-center gap-1">
+              <span className="text-[11px] uppercase font-bold tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full flex items-center gap-1">
                 <ShieldCheck className="w-3 h-3" />
                 Verifiable
               </span>
             ) : (
-              <span className="text-[10px] uppercase font-bold tracking-wider bg-rose-500/10 text-rose-400 border border-rose-500/20 px-2 py-0.5 rounded-full flex items-center gap-1">
+              <span className="text-[11px] uppercase font-bold tracking-wider bg-rose-500/10 text-rose-400 border border-rose-500/20 px-2 py-0.5 rounded-full flex items-center gap-1">
                 <ShieldAlert className="w-3 h-3" />
                 Non-Verifiable
               </span>
@@ -86,7 +86,7 @@ export default function RequirementDetails({ requirement, onApplyImprovement }: 
             </span>
           </div>
           <div>
-            <span className="block text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Quality Score</span>
+            <span className="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Quality Score</span>
             <span className="text-xs font-bold text-slate-200">
               {analysis.score >= 80 ? 'Excellent Spec' : analysis.score >= 60 ? 'Needs Improvement' : 'Vague & Non-Testable'}
             </span>
@@ -115,7 +115,7 @@ export default function RequirementDetails({ requirement, onApplyImprovement }: 
         >
           Ambiguities
           {analysis.ambiguities.length > 0 && (
-            <span className="bg-indigo-500 text-white text-[9px] font-bold px-1.5 py-0.2 rounded-full">
+            <span className="bg-indigo-500 text-white text-[10px] font-bold px-1.5 py-0.2 rounded-full">
               {analysis.ambiguities.length}
             </span>
           )}
@@ -131,7 +131,7 @@ export default function RequirementDetails({ requirement, onApplyImprovement }: 
         >
           Acceptance Criteria
           {analysis.missingAcceptanceCriteria.length > 0 && (
-            <span className="bg-white/10 text-indigo-200 text-[9px] font-mono px-1.5 py-0.2 rounded">
+            <span className="bg-white/10 text-indigo-200 text-[10px] font-mono px-1.5 py-0.2 rounded">
               {analysis.missingAcceptanceCriteria.length}
             </span>
           )}
@@ -166,10 +166,10 @@ export default function RequirementDetails({ requirement, onApplyImprovement }: 
               {/* Core Text & Improved Diff Compare */}
               <div className="bg-black/30 rounded-xl border border-white/10 p-4">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Statement Sandbox</span>
+                  <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Statement Sandbox</span>
                   <button
                     onClick={() => setShowImproved(!showImproved)}
-                    className="flex items-center gap-1 bg-white/5 hover:bg-white/10 text-slate-300 px-2 py-1 rounded-md text-[10px] font-semibold border border-white/10 transition-colors cursor-pointer"
+                    className="flex items-center gap-1 bg-white/5 hover:bg-white/10 text-slate-300 px-2 py-1 rounded-md text-[11px] font-semibold border border-white/10 transition-colors cursor-pointer"
                   >
                     <Eye className="w-3 h-3 text-indigo-400" />
                     Show {showImproved ? 'Original' : 'Improved Option'}
@@ -192,11 +192,11 @@ export default function RequirementDetails({ requirement, onApplyImprovement }: 
                   <div className="mt-3 pt-3 border-t border-white/10 flex items-start gap-2">
                     <Sparkles className="w-3.5 h-3.5 text-indigo-400 shrink-0 mt-0.5" />
                     <div>
-                      <p className="text-[10px] text-indigo-300 font-bold">Why this rewrite is superior:</p>
-                      <p className="text-[11px] text-slate-300 mt-0.5">{analysis.suggestedImprovements[0].explanation}</p>
+                      <p className="text-[11px] text-indigo-300 font-bold">Why this rewrite is superior:</p>
+                      <p className="text-[12px] text-slate-300 mt-0.5">{analysis.suggestedImprovements[0].explanation}</p>
                       <button
                         onClick={() => onApplyImprovement(requirement.id, analysis.suggestedImprovements[0].suggested)}
-                        className="mt-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-[10px] font-bold px-2.5 py-1.5 rounded-lg transition-colors flex items-center gap-1 cursor-pointer shadow-lg shadow-indigo-600/20"
+                        className="mt-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition-colors flex items-center gap-1 cursor-pointer shadow-lg shadow-indigo-600/20"
                       >
                         <Check className="w-3 h-3" />
                         Apply & Rewrite Statement
@@ -210,10 +210,10 @@ export default function RequirementDetails({ requirement, onApplyImprovement }: 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {Object.entries(analysis.scores).map(([key, val]) => (
                   <div key={key} className="bg-black/20 border border-white/5 p-3 rounded-xl">
-                    <span className="block text-[10px] text-slate-400 font-semibold capitalize tracking-wider">{key}</span>
+                    <span className="block text-[11px] text-slate-400 font-semibold capitalize tracking-wider">{key}</span>
                     <div className="flex items-baseline gap-1 mt-1.5">
                       <span className="text-sm font-bold font-mono text-slate-200">{val}</span>
-                      <span className="text-[10px] text-slate-500">/100</span>
+                      <span className="text-[11px] text-slate-500">/100</span>
                     </div>
                     <div className="w-full bg-white/5 h-1 rounded-full mt-2 overflow-hidden">
                       <div
@@ -231,7 +231,7 @@ export default function RequirementDetails({ requirement, onApplyImprovement }: 
                   <ShieldAlert className="w-4 h-4 shrink-0 mt-0.5" />
                   <div>
                     <h5 className="font-semibold text-rose-300">Non-Verifiable Spec Warning</h5>
-                    <p className="text-slate-200 mt-1 text-[11px] leading-relaxed">{analysis.nonVerifiableReason}</p>
+                    <p className="text-slate-200 mt-1 text-[12px] leading-relaxed">{analysis.nonVerifiableReason}</p>
                   </div>
                 </div>
               )}
@@ -259,16 +259,16 @@ export default function RequirementDetails({ requirement, onApplyImprovement }: 
                         <span className="text-xs font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded">
                           "{amb.term}"
                         </span>
-                        <span className="text-[10px] text-slate-400">Unquantifiable Quality Attribute</span>
+                        <span className="text-[11px] text-slate-400">Unquantifiable Quality Attribute</span>
                       </div>
                       <p className="text-xs text-slate-200 leading-relaxed pl-1">
                         <strong>Review:</strong> {amb.explanation}
                       </p>
                       {amb.suggestions.length > 0 && (
                         <div className="pl-1 space-y-1">
-                          <p className="text-[10px] font-semibold text-slate-400">Engineering Recommendation:</p>
+                          <p className="text-[11px] font-semibold text-slate-400">Engineering Recommendation:</p>
                           {amb.suggestions.map((sug, sIdx) => (
-                            <div key={sIdx} className="text-[11px] text-indigo-300 flex items-center gap-1 font-sans">
+                            <div key={sIdx} className="text-[12px] text-indigo-300 flex items-center gap-1 font-sans">
                               <span className="inline-block w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
                               <span>{sug}</span>
                             </div>
@@ -291,7 +291,7 @@ export default function RequirementDetails({ requirement, onApplyImprovement }: 
               className="space-y-3"
             >
               <div className="flex items-center justify-between">
-                <h4 className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                <h4 className="text-[12px] font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-1">
                   <CheckSquare className="w-3.5 h-3.5 text-indigo-400" />
                   Missing Acceptance Criteria & Test Scenarios
                 </h4>
@@ -328,11 +328,11 @@ export default function RequirementDetails({ requirement, onApplyImprovement }: 
             >
               <div className="flex items-center gap-1">
                 <Layers className="w-3.5 h-3.5 text-indigo-400" />
-                <h4 className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+                <h4 className="text-[12px] font-semibold text-slate-400 uppercase tracking-wider">
                   Atomic Statements Decomposition
                 </h4>
               </div>
-              <p className="text-[11px] text-slate-400">
+              <p className="text-[12px] text-slate-400">
                 Compound requirements should be broken into discrete specifications. These atomic statements are fully testable and isolate system components cleanly.
               </p>
 

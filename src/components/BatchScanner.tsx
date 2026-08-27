@@ -118,26 +118,26 @@ export default function BatchScanner({ requirements, onHighlightConflict, onErro
                   >
                     <div className="flex items-center justify-between text-xs font-semibold">
                       <div className="flex items-center gap-1.5 truncate">
-                        <span className="text-slate-200 font-mono text-[10px] bg-black/30 px-1.5 py-0.5 rounded border border-white/5">
+                        <span className="text-slate-200 font-mono text-[11px] bg-black/30 px-1.5 py-0.5 rounded border border-white/5">
                           {conf.req1Title}
                         </span>
-                        <span className="text-slate-400 text-[10px]">vs</span>
-                        <span className="text-slate-200 font-mono text-[10px] bg-black/30 px-1.5 py-0.5 rounded border border-white/5">
+                        <span className="text-slate-400 text-[11px]">vs</span>
+                        <span className="text-slate-200 font-mono text-[11px] bg-black/30 px-1.5 py-0.5 rounded border border-white/5">
                           {conf.req2Title}
                         </span>
                       </div>
-                      <span className="text-[9px] uppercase tracking-wider font-bold">
+                      <span className="text-[10px] uppercase tracking-wider font-bold">
                         {conf.severity} Severity
                       </span>
                     </div>
 
-                    <p className="text-[11px] leading-relaxed text-slate-200">
+                    <p className="text-[12px] leading-relaxed text-slate-200">
                       {conf.explanation}
                     </p>
 
                     <button
                       onClick={() => onHighlightConflict([conf.req1Id, conf.req2Id])}
-                      className="self-start text-[10px] text-indigo-400 hover:text-indigo-300 transition-colors underline bg-transparent border-none p-0 cursor-pointer"
+                      className="self-start text-[11px] text-indigo-400 hover:text-indigo-300 transition-colors underline bg-transparent border-none p-0 cursor-pointer"
                     >
                       Locate Conflict Pair in List
                     </button>
@@ -149,7 +149,7 @@ export default function BatchScanner({ requirements, onHighlightConflict, onErro
 
           {/* Redundancies Section */}
           <div id="redundancies-scanner-block" className="space-y-3">
-            <h4 className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+            <h4 className="text-[12px] font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
               <Copy className="w-3.5 h-3.5 text-indigo-400" />
               Overlaps & Redundancies ({results.duplicates.length})
             </h4>
@@ -170,26 +170,26 @@ export default function BatchScanner({ requirements, onHighlightConflict, onErro
                   >
                     <div className="flex items-center justify-between text-xs">
                       <div className="flex items-center gap-1.5 truncate">
-                        <span className="text-slate-200 font-mono text-[10px] bg-black/20 px-1.5 py-0.5 rounded border border-white/5">
+                        <span className="text-slate-200 font-mono text-[11px] bg-black/20 px-1.5 py-0.5 rounded border border-white/5">
                           {dup.req1Title}
                         </span>
-                        <span className="text-slate-400 text-[10px]">&</span>
-                        <span className="text-slate-200 font-mono text-[10px] bg-black/20 px-1.5 py-0.5 rounded border border-white/5">
+                        <span className="text-slate-400 text-[11px]">&</span>
+                        <span className="text-slate-200 font-mono text-[11px] bg-black/20 px-1.5 py-0.5 rounded border border-white/5">
                           {dup.req2Title}
                         </span>
                       </div>
-                      <span className="text-[10px] text-indigo-300 font-bold bg-indigo-500/10 border border-indigo-500/20 px-1.5 py-0.5 rounded-full">
+                      <span className="text-[11px] text-indigo-300 font-bold bg-indigo-500/10 border border-indigo-500/20 px-1.5 py-0.5 rounded-full">
                         {dup.similarity}% overlap
                       </span>
                     </div>
 
-                    <p className="text-[11px] leading-relaxed text-slate-200">
+                    <p className="text-[12px] leading-relaxed text-slate-200">
                       {dup.explanation}
                     </p>
 
                     <button
                       onClick={() => onHighlightConflict([dup.req1Id, dup.req2Id])}
-                      className="self-start text-[10px] text-indigo-400 hover:text-indigo-300 transition-colors underline bg-transparent border-none p-0 cursor-pointer"
+                      className="self-start text-[11px] text-indigo-400 hover:text-indigo-300 transition-colors underline bg-transparent border-none p-0 cursor-pointer"
                     >
                       Locate Overlap Pair in List
                     </button>

@@ -3,7 +3,7 @@ import path from 'path';
 import multer from 'multer';
 import xlsx from 'xlsx';
 // @ts-ignore
-import pdfParse from 'pdf-parse';
+import { PDFParse } from 'pdf-parse';
 import { GoogleGenAI, Type } from '@google/genai';
 import { createServer as createViteServer } from 'vite';
 
@@ -272,7 +272,8 @@ app.post('/api/parse-file', upload.single('file'), async (req, res) => {
     } 
     // Parse PDF Document
     else if (mimetype === 'application/pdf' || originalname.endsWith('.pdf')) {
-      const data = await pdfParse(buffer);
+      const parser = new PDFParse({ data: buffer });
+      const data = await parser.getText();
       const pdfText = data.text || '';
 
       if (pdfText.trim().length === 0) {

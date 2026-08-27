@@ -61,7 +61,7 @@ export default function AIPromptGenerator({ onRequirementsGenerated, isLoading, 
           <Sparkles className="w-4.5 h-4.5 text-indigo-400" />
           AI Synthesis Engine
         </h3>
-        <span className="text-[10px] bg-white/5 text-indigo-200 px-2 py-0.5 rounded-full font-medium border border-white/10">
+        <span className="text-[11px] bg-white/5 text-indigo-200 px-2 py-0.5 rounded-full font-medium border border-white/10">
           Powered by Gemini 3.5 Flash
         </span>
       </div>
@@ -97,7 +97,7 @@ export default function AIPromptGenerator({ onRequirementsGenerated, isLoading, 
 
         {/* Quick presets */}
         <div>
-          <span className="block text-[10px] text-slate-400 uppercase font-semibold tracking-wider mb-2">Or, try an expert sandbox seed:</span>
+          <span className="block text-[11px] text-slate-400 uppercase font-semibold tracking-wider mb-2">Or, try an expert sandbox seed:</span>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {CONCEPTS.map((concept, idx) => (
               <button

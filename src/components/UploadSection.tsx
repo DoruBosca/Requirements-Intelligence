@@ -196,7 +196,7 @@ export default function UploadSection({ onRequirementsLoaded, isLoading, setIsLo
               <p className="text-xs text-slate-200 font-medium">
                 Drag & drop or <span className="text-indigo-400 hover:underline">browse files</span>
               </p>
-              <p className="text-[10px] text-slate-400">Excel (.xlsx, .xls) & PDF (.pdf) supported (Max 5MB)</p>
+              <p className="text-[11px] text-slate-400">Excel (.xlsx, .xls) & PDF (.pdf) supported (Max 5MB)</p>
             </div>
           </div>
         </div>
@@ -222,7 +222,7 @@ export default function UploadSection({ onRequirementsLoaded, isLoading, setIsLo
 
           <div className="space-y-4">
             <div>
-              <label className="block text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Select Enterprise Workspace</label>
+              <label className="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Select Enterprise Workspace</label>
               <select
                 value={selectedProjectId}
                 onChange={(e) => setSelectedProjectId(e.target.value)}
@@ -237,7 +237,7 @@ export default function UploadSection({ onRequirementsLoaded, isLoading, setIsLo
               </select>
             </div>
 
-            <div className="bg-black/30 p-3 rounded-lg border border-white/5 text-[11px] text-slate-300">
+            <div className="bg-black/30 p-3 rounded-lg border border-white/5 text-[12px] text-slate-300">
               <span className="font-semibold text-slate-200">Endpoint:</span> <code className="text-indigo-300">GET /api/internal-tool/projects/:id</code>
               <div className="mt-1 flex items-center gap-2 text-slate-400">
                 <span className="inline-block w-2 h-2 rounded-full bg-green-500"></span>
@@ -306,7 +306,7 @@ export default function UploadSection({ onRequirementsLoaded, isLoading, setIsLo
         </form>
 
         <div className="mt-3">
-          <span className="block text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Bulk Paste (One per line)</span>
+          <span className="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Bulk Paste (One per line)</span>
           <textarea
             rows={2}
             placeholder="Paste multiple statements here..."
